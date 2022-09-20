@@ -1,0 +1,2 @@
+(2, 3, N) FLLFR
+(1, 0, S) FFRLF
