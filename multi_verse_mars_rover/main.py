@@ -48,7 +48,7 @@ def run(file_path: str, grid_x_max: int, grid_y_max: int):
                 rover.move_backward()
                 break
 
-        # Very unuseful output without reading the code. It could be clearer but I would check with my product manager on output specifications to get it right.
+        # Very unuseful output without reading the code. It could be clearer but I would check with my product manager on output specifications to get it right. and maybe wrap it in a founction.
         print(f"({rover.x_coord}, {rover.y_coord}, {rover.orientation}) {rover.is_lost_to_string()}")
 
 

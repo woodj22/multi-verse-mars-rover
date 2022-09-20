@@ -1,17 +1,31 @@
 from multi_verse_mars_rover.main import rover_has_gone_off_grid, create_rovers_from_file_string
 
 
-def test_it_can_determine_rover_has_gone_off_grid_on_y_axis():
+def test_it_can_determine_rover_has_gone_off_grid_on_max_y_axis():
     x_max = 10
     y_max = 5
     rover_coord = (6, 9)
     assert rover_has_gone_off_grid(x_max, y_max, rover_coord) is True
 
 
-def test_it_can_determine_rover_has_gone_off_grid_on_x_axis():
+def test_it_can_determine_rover_has_gone_off_grid_on_max_x_axis():
     x_max = 10
     y_max = 5
     rover_coord = (11, 4)
+    assert rover_has_gone_off_grid(x_max, y_max, rover_coord) is True
+
+
+def test_it_can_determine_rover_has_gone_off_grid_on_min_x_axis():
+    x_max = 1
+    y_max = 1
+    rover_coord = (-1, 1)
+    assert rover_has_gone_off_grid(x_max, y_max, rover_coord) is True
+
+
+def test_it_can_determine_rover_has_gone_off_grid_on_min_y_axis():
+    x_max = 1
+    y_max = 1
+    rover_coord = (1, -1)
     assert rover_has_gone_off_grid(x_max, y_max, rover_coord) is True
 
 
